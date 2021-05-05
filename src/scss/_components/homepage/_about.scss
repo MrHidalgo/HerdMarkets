@@ -15,6 +15,9 @@
 		&-left {
 			width: 100%;
 			max-width: 375px;
+			@include adaptive(1023) {
+				max-width: 325px;
+			}
 		}
 
 		&-right {
@@ -32,6 +35,9 @@
 		height: 375px;
 		border-radius: 10px;
 		background-color: #efefef;
+		@include adaptive(1023) {
+			height: 325px;
+		}
 
 		img,
 		svg {
@@ -44,12 +50,24 @@
 		font-size: 40px;
 		color: #494949;
 		@extend %fontInter;
+		@include adaptive(1279) {
+			font-size: 36px;
+		}
+		@include adaptive(1023) {
+			font-size: 33px;
+		}
 	}
 
 	&__desc {
 		padding-bottom: 60px;
 		font-size: 20px;
 		color: #78828d;
+		@include adaptive(1279) {
+			font-size: 18px;
+		}
+		@include adaptive(1023) {
+			font-size: 16px;
+		}
 	}
 }
 

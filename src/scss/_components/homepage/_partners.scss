@@ -11,6 +11,10 @@
 
 		&-wrapper {
 			display: flex;
+			align-items: center;
+			@include adaptive(1023) {
+				flex-wrap: wrap;
+			}
 		}
 
 		&-col {
@@ -19,6 +23,15 @@
 			max-width: 100%;
 			padding-left: 15px;
 			padding-right: 15px;
+			@include adaptive(1023) {
+				flex: 100%;
+				padding-left: 0;
+				padding-right: 0;
+
+				&:not(:last-of-type) {
+					padding-bottom: 15px;
+				}
+			}
 		}
 
 		&-left {
@@ -51,6 +64,9 @@
 			font-weight: 500;
 			@extend %fontInter;
 			color: #494949;
+			@include adaptive(1279) {
+				font-size: 20px;
+			}
 		}
 
 		&-info {
