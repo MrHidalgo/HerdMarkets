@@ -1,0 +1,60 @@
+// SECTION :: START
+
+.popular {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__wrapper {
+		display: flex;
+
+		&-left,
+		&-right {
+			width: 50%;
+		}
+
+		&-left {
+			padding-right: 25px;
+		}
+
+		&-right {
+			padding-left: 25px;
+		}
+	}
+
+	&__title {
+		padding-bottom: 50px;
+		text-align: center;
+		color: #494949;
+		@extend %fontInter;
+		font-size: 26px;
+		font-weight: 700;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 25px;
+
+		&-label {
+			font-size: 14px;
+			font-weight: 600;
+			color: #8695a7;
+			text-transform: uppercase;
+		}
+
+		&-title {
+			color: #494949;
+			font-size: 23px;
+			font-weight: 600;
+		}
+
+		&-link {
+			display: flex;
+			font-size: 14px;
+			font-weight: 700;
+			color: #838382;
+		}
+	}
+}
+
+// SECTION :: END
