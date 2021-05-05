@@ -5,17 +5,6 @@ pageClassName: p-home
 ---
 extends shared/_layout
 
-block script
-  script.
-    const initPreventBehavior = () => {
-      const link = document.querySelectorAll("a");
-      link.forEach((val, idx) => {val.addEventListener("click", (e) => {
-          if(val.getAttribute("href") === "#") {
-            e.preventDefault();
-          }
-        });
-      });
-    };
 block content
   div.body.body--start(class!= pageClassName)
 
@@ -24,3 +13,32 @@ block content
     include components/homepage/_about
     include components/homepage/_partners
     include components/homepage/_describe
+
+block script
+  script.
+    const initPreventBehavior = () => {
+      const link = document.querySelectorAll("a");
+      link.forEach((val, idx) => {val.addEventListener("click", (e) => {
+        if(val.getAttribute("href") === "#") {
+          e.preventDefault();
+        }
+      });
+      });
+    };
+    const initHamburger = () => {
+      const btn = document.querySelector("[hamburger-js]"),
+              hideScrollContainer = document.querySelectorAll("html, body"),
+              mobileContainer = document.querySelector("[mobile-block-js]");
+      if(btn) {
+        btn.addEventListener("click", (ev) => {
+          const elem = ev.currentTarget;
+          elem.classList.toggle("is-active");
+          mobileContainer.classList.toggle("is-open");
+          hideScrollContainer.forEach((val, idx) => {
+            val.classList.toggle("is-hideScroll");
+          });
+        });
+      }
+    };
+    initPreventBehavior();
+    initHamburger();

@@ -9,7 +9,9 @@ header#header.header
           a.logo__btn(href="/")
             span.logo__text HerdMarkets
 
-      .header__wrapper-right
+        +hamburger()
+
+      .header__wrapper-right(mobile-block-js)
 
         nav.header__nav
           a.header__nav-link.header__nav-link--default(href="#") Popular

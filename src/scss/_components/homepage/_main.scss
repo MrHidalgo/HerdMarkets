@@ -4,6 +4,9 @@
 	padding-top: 200px;
 	padding-bottom: 50px;
 	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(#fff,1) 100%);
+	@include adaptive(767) {
+		padding-top: 125px;
+	}
 
 	.c-grid {
 		max-width: 1366px;
@@ -11,20 +14,33 @@
 
 	&__wrapper {
 		display: flex;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		&-left,
 		&-right {
 			width: 50%;
+			@include adaptive(767) {
+				width: 100%;
+			}
 		}
 
 		&-left {
 			padding-right: 30px;
+			@include adaptive(767) {
+				padding-right: 0;
+			}
 
 			img {
 				display: block;
 				max-width: 100%;
 				height: auto;
 				margin: 30px auto;
+				@include adaptive(767) {
+					margin-top: 50px;
+					margin-bottom: 50px;
+				}
 			}
 		}
 
@@ -33,6 +49,9 @@
 			display: flex;
 			align-items: flex-end;
 			justify-content: flex-end;
+			@include adaptive(767) {
+				display: none;
+			}
 
 			img {
 				transform: translateY(50px);
@@ -63,6 +82,10 @@
 		@include adaptive(1023) {
 			font-size: 40px;
 		}
+		@include adaptive(767) {
+			font-size: 35px;
+			text-align: center;
+		}
 	}
 
 	&__desc {
@@ -73,6 +96,16 @@
 		}
 		@include adaptive(1023) {
 			font-size: 20px;
+		}
+		@include adaptive(767) {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		@include adaptive(767) {
+			justify-content: center;
 		}
 	}
 }

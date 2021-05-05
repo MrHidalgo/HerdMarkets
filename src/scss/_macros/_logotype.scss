@@ -17,6 +17,9 @@
 		@include adaptive(1023) {
 			font-size: 40px;
 		}
+		@include adaptive(767) {
+			font-size: 35px;
+		}
 	}
 }
 

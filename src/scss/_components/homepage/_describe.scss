@@ -11,16 +11,26 @@
 		box-shadow: 0 2px 10px 0 rgba(#000, 0.05);
 		border-radius: 10px;
 		background-color: #ffffff;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		&.describe__wrapper--reverse {
 			.describe__wrapper {
 				&-left {
 					order: 2;
+					@include adaptive(767) {
+						order: 1;
+					}
 				}
 				&-right {
 					order: 1;
 					padding-left: 0;
 					padding-right: 20px;
+					@include adaptive(767) {
+						order: 2;
+						padding-right: 0;
+					}
 				}
 			}
 		}
@@ -35,6 +45,11 @@
 			@include adaptive(1023) {
 				max-width: 300px;
 			}
+			@include adaptive(767) {
+				max-width: 200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		&-right {
@@ -42,6 +57,11 @@
 			min-width: 1px;
 			max-width: 100%;
 			padding-left: 20px;
+			@include adaptive(767) {
+				flex: 100%;
+				padding-top: 20px;
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -52,6 +72,9 @@
 		height: 300px;
 		border-radius: 10px;
 		background-color: #efefef;
+		@include adaptive(767) {
+			height: 200px;
+		}
 
 		img,
 		svg {
@@ -70,6 +93,10 @@
 		@include adaptive(1023) {
 			font-size: 33px;
 		}
+		@include adaptive(767) {
+			font-size: 30px;
+			text-align: center;
+		}
 	}
 
 	&__desc {
@@ -81,6 +108,17 @@
 		}
 		@include adaptive(1023) {
 			font-size: 16px;
+		}
+		@include adaptive(767) {
+			padding-bottom: 30px;
+			font-size: 14px;
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		@include adaptive(767) {
+			justify-content: center;
 		}
 	}
 }

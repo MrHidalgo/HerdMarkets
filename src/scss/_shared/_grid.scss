@@ -11,6 +11,10 @@ $paddingRight: $paddingLeft;
   margin-left: auto;
   padding-right: $paddingRight;
   padding-left: $paddingLeft;
+  @include adaptive(767) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 

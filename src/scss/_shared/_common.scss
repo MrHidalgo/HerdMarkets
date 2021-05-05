@@ -2,6 +2,9 @@
 
 .copyright {
 	display: flex;
+	@include adaptive(767) {
+		padding-top: 35px;
+	}
 
 	&__text {
 		text-transform: uppercase;
