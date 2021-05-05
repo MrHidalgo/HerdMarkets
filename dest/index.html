@@ -1,0 +1,97 @@
+
+<!--include ../utilities/_dataForm-->
+<!--include ../utilities/_data--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META TAGS-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- TITLE-->
+    <title>HerdMarkets</title>
+    <!-- FAVICON-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&amp;family=Inter:wght@100;300;500;700;900&amp;display=swap" rel="stylesheet">
+    <!-- STYLE :: START-->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- STYLE :: END-->
+  </head>
+  <body>
+    <!-- HEADER :: START-->
+    <header class="header" id="header">
+      <div class="c-grid-fluid">
+        <div class="header__wrapper">
+          <div class="header__wrapper-left">
+            <div class="logo logo--header"><a class="logo__btn" href="/"><span class="logo__text">HerdMarkets</span></a></div>
+          </div>
+          <div class="header__wrapper-right">
+            <nav class="header__nav"><a class="header__nav-link header__nav-link--default" href="#">Popular</a><a class="header__nav-link header__nav-link--default" href="#">Education</a><a class="header__nav-link header__nav-link--default" href="#">Finance</a>
+              <div class="header__nav-container"><a class="header__nav-link" href="#">Investing</a>
+                <div class="header__nav-dropdown">
+                  <div class="c-grid">
+                    <div class="header__nav-block-wrapper">
+                      <div>
+                        <div class="header__nav-block">
+                          <p class="header__nav-block-title">Investing Basics</p>
+                          <ul class="header__nav-block-list">
+                            <li><a href="#">How To Buy Shares</a></li>
+                            <li><a href="#">How to build a share portfolio</a></li>
+                            <li><a href="#">How the stock market works</a></li>
+                            <li><a href="#">Investing Terms Explained</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="header__nav-block">
+                          <p class="header__nav-block-title">Investing Basics</p>
+                          <ul class="header__nav-block-list">
+                            <li><a href="#">How To Buy Shares</a></li>
+                            <li><a href="#">How to build a share portfolio</a></li>
+                            <li><a href="#">How the stock market works</a></li>
+                            <li><a href="#">Investing Terms Explained</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="header__nav-block">
+                          <p class="header__nav-block-title">Investing Basics</p>
+                          <ul class="header__nav-block-list">
+                            <li><a href="#">How To Buy Shares</a></li>
+                            <li><a href="#">How to build a share portfolio</a></li>
+                            <li><a href="#">How the stock market works</a></li>
+                            <li><a href="#">Investing Terms Explained</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER :: END-->
+    <div class="body body--start p-home"></div>
+    <!-- FOOTER :: START-->
+    <footer class="footer" id="footer">
+      <div class="c-grid">
+        <div class="footer__wrapper"></div>
+      </div>
+    </footer>
+    <!-- FOOTER :: END-->
+  </body>
+  <script>
+    const initPreventBehavior = () => {
+      const link = document.querySelectorAll("a");
+      link.forEach((val, idx) => {val.addEventListener("click", (e) => {
+          if(val.getAttribute("href") === "#") {
+            e.preventDefault();
+          }
+        });
+      });
+    };
+  </script>
+</html>

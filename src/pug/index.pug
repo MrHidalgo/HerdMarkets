@@ -1,0 +1,20 @@
+---
+title: HerdMarkets
+
+pageClassName: p-home
+---
+extends shared/_layout
+
+block script
+  script.
+    const initPreventBehavior = () => {
+      const link = document.querySelectorAll("a");
+      link.forEach((val, idx) => {val.addEventListener("click", (e) => {
+          if(val.getAttribute("href") === "#") {
+            e.preventDefault();
+          }
+        });
+      });
+    };
+block content
+  div.body.body--start(class!= pageClassName)

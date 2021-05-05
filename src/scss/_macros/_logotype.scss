@@ -1,0 +1,19 @@
+// LOGOTYPE :: START
+
+.logo {
+	&.logo--header {}
+
+	&__btn {
+		display: flex;
+	}
+
+	&__text {
+		display: block;
+		color: #ffffff;
+		@extend %fontDMSerifText;
+		font-size: 44px;
+		line-height: 0.8;
+	}
+}
+
+// LOGOTYPE :: END
