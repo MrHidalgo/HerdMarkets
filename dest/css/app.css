@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
 .about__visual img,
-.about__visual svg, .partners__block-visual img {
+.about__visual svg, .partners__block-visual img, .describe__visual img,
+.describe__visual svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,7 +15,7 @@
 }
 
 /* line 27, src/scss/_utilities/_extend.scss */
-.header__nav-block-title, .main__title, .popular__title, .about__title, .partners__block-title {
+.header__nav-block-title, .main__title, .popular__title, .about__title, .partners__block-title, .describe__title {
   font-family: 'Inter', sans-serif;
 }
 
@@ -401,9 +402,20 @@ picture {
   -webkit-border-radius: 2rem;
           border-radius: 2rem;
   background-color: #74a643;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-/* line 19, src/scss/_macros/_btn.scss */
+/* line 20, src/scss/_macros/_btn.scss */
+.c-btn:hover {
+  background-color: #67943c;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 25, src/scss/_macros/_btn.scss */
 .c-btn__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -415,7 +427,7 @@ picture {
           align-items: center;
 }
 
-/* line 23, src/scss/_macros/_btn.scss */
+/* line 29, src/scss/_macros/_btn.scss */
 .c-btn__wrapper--center {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -423,20 +435,20 @@ picture {
           justify-content: center;
 }
 
-/* line 28, src/scss/_macros/_btn.scss */
+/* line 34, src/scss/_macros/_btn.scss */
 .c-btn.c-btn--small {
   height: 40px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* line 33, src/scss/_macros/_btn.scss */
+/* line 39, src/scss/_macros/_btn.scss */
 .c-btn.c-btn--small span {
   font-size: 18px;
   font-weight: 500;
 }
 
-/* line 39, src/scss/_macros/_btn.scss */
+/* line 45, src/scss/_macros/_btn.scss */
 .c-btn span {
   font-size: 22px;
   font-weight: 700;
@@ -1051,6 +1063,95 @@ picture {
   font-weight: 500;
   text-transform: uppercase;
   color: #a3a1a1;
+}
+
+/* line 3, src/scss/_components/homepage/_describe.scss */
+.describe {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* line 7, src/scss/_components/homepage/_describe.scss */
+.describe__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #ffffff;
+}
+
+/* line 17, src/scss/_components/homepage/_describe.scss */
+.describe__wrapper.describe__wrapper--reverse .describe__wrapper-left {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+/* line 20, src/scss/_components/homepage/_describe.scss */
+.describe__wrapper.describe__wrapper--reverse .describe__wrapper-right {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/* line 28, src/scss/_components/homepage/_describe.scss */
+.describe__wrapper:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+/* line 32, src/scss/_components/homepage/_describe.scss */
+.describe__wrapper-left {
+  width: 100%;
+  max-width: 375px;
+}
+
+/* line 37, src/scss/_components/homepage/_describe.scss */
+.describe__wrapper-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+/* line 45, src/scss/_components/homepage/_describe.scss */
+.describe__visual {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #efefef;
+}
+
+/* line 59, src/scss/_components/homepage/_describe.scss */
+.describe__title {
+  padding-bottom: 30px;
+  font-size: 40px;
+  color: #494949;
+}
+
+/* line 66, src/scss/_components/homepage/_describe.scss */
+.describe__desc {
+  padding-bottom: 60px;
+  font-size: 20px;
+  color: #78828d;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

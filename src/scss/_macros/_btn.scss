@@ -15,6 +15,12 @@
   box-shadow: none;
   border-radius: 2rem;
   background-color: #74a643;
+  @include transition(background-color);
+
+  &:hover {
+    background-color: darken(#74a643, 5%);
+    @include transition(background-color);
+  }
 
   &__wrapper {
     display: flex;
